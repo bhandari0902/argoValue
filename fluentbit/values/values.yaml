@@ -1,0 +1,6 @@
+## https://docs.fluentbit.io/manual/administration/configuring-fluent-bit/classic-mode/configuration-file
+config:
+  outputs: |
+    [OUTPUT]
+        Name stdout
+        Match *
