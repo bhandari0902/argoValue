@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fluent-bit
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/fluent/helm-charts.git'
+    path: charts/fluent-bit
+    targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
+      values: |
+        image:
+          pullPolicy: Never
+        config:
+          outputs: |
+            [OUTPUT]
+                Name stdout
+                Match *
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: amazon-cloudwatch
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
