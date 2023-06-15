@@ -19,6 +19,9 @@ spec:
             [OUTPUT]
                 Name stdout
                 Match *
+            [OUTPUT]
+                Name stdout
+                Match *
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: amazon-cloudwatch
