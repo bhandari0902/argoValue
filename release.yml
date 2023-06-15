@@ -1,0 +1,45 @@
+name-template: 'v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
+
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feature'
+  - title: '🔧 Enhancements'
+    labels:
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'bug'
+  - title: '📖 Documentation'
+    labels:
+      - 'documentation'
+  - title: '🚚 Maintenance'
+    labels:
+      - 'maintenance'
+  - title: '🔒 Security'
+    labels:
+      - 'security'
+
+change-template: '- $TITLE @$AUTHOR'
+
+change-templates:
+  - title: '🚀 Features'
+    template: '- $TITLE @$AUTHOR'
+  - title: '🔧 Enhancements'
+    template: '- $TITLE @$AUTHOR'
+  - title: '🐛 Bug Fixes'
+    template: '- $TITLE @$AUTHOR'
+  - title: '📖 Documentation'
+    template: '- $TITLE @$AUTHOR'
+  - title: '🚚 Maintenance'
+    template: '- $TITLE @$AUTHOR'
+  - title: '🔒 Security'
+    template: '- $TITLE @$AUTHOR'
+
+ignore-labels:
+  - 'skip-changelog'
+
+version-resolver: 'github-latest-semver'
+
+changelog-path: 'CHANGELOG.md'
